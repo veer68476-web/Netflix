@@ -1,0 +1,53 @@
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 20;
+  color: var(--text-primary);
+  transition: background 220ms ease, box-shadow 220ms ease;
+}
+.site-header.is-scrolled { background: rgba(8, 10, 15, .88); box-shadow: 0 1px 0 rgba(255,255,255,.06); backdrop-filter: blur(18px); }
+.nav-shell { width: min(100% - 88px, 1500px); height: 78px; margin: auto; display: flex; align-items: center; gap: 48px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: #fff; font-size: 19px; font-weight: 750; letter-spacing: -.7px; white-space: nowrap; }
+.brand-mark { display: grid; place-items: center; width: 31px; height: 31px; border-radius: 10px; background: linear-gradient(145deg, #ff3945, #b80711); box-shadow: 0 5px 18px rgba(229,9,20,.32); font-size: 19px; font-weight: 800; }
+.desktop-nav { display: flex; align-items: center; gap: 17px; }
+.nav-link, .mobile-nav-link { color: #b9bbc3; font-size: 13px; font-weight: 550; transition: color 160ms ease; }
+.nav-link:hover, .nav-link.active, .mobile-nav-link:hover, .mobile-nav-link.active { color: #fff; }
+.nav-actions { margin-left: auto; display: flex; align-items: center; gap: 20px; }
+.icon-button { position: relative; width: 36px; height: 36px; display: grid; place-items: center; border: 0; border-radius: 50%; background: transparent; color: #f7f7f8; cursor: pointer; transition: background 160ms ease; }
+.icon-button:hover { background: rgba(255,255,255,.1); }
+.notification-dot { position: absolute; top: 7px; right: 8px; width: 6px; height: 6px; border: 1px solid #101117; border-radius: 50%; background: var(--accent); }
+.profile-menu-wrap { position: relative; }
+.profile-control { display: flex; align-items: center; gap: 8px; padding: 0; border: 0; color: #fff; background: transparent; cursor: pointer; }
+.profile-avatar { display: grid; place-items: center; width: 31px; height: 31px; border-radius: 9px; background: linear-gradient(145deg, #93b6a0, #375e50); font-size: 13px; font-weight: 700; }
+.profile-dropdown { position: absolute; top: calc(100% + 13px); right: 0; z-index: 30; width: 208px; padding: 8px 0; border: 1px solid rgba(255,255,255,.12); border-radius: 5px; background: rgba(12,13,17,.98); box-shadow: 0 16px 35px rgba(0,0,0,.48); backdrop-filter: blur(16px); }
+.profile-dropdown a, .profile-dropdown button { display: block; width: 100%; padding: 10px 15px; border: 0; color: #e2e2e6; background: transparent; text-align: left; font-size: 12px; cursor: pointer; }
+.profile-dropdown a:hover, .profile-dropdown button:hover { color: #fff; text-decoration: underline; }
+.dropdown-divider { display: block; height: 1px; margin: 6px 0; background: rgba(255,255,255,.14); }
+.nav-search { display: flex; align-items: center; gap: 8px; width: 232px; height: 38px; padding: 0 7px 0 12px; border: 1px solid rgba(255,255,255,.38); background: rgba(8,10,15,.72); color: #fff; animation: search-in 160ms ease both; }
+.nav-search input { width: 100%; min-width: 0; border: 0; outline: 0; color: #fff; background: transparent; font-size: 12px; }
+.nav-search input::placeholder { color: #a0a3ad; }
+.search-close { width: 26px; height: 26px; flex: 0 0 auto; }
+.mobile-menu-button, .mobile-menu { display: none; }
+@keyframes search-in { from { opacity: 0; transform: translateX(8px); } to { opacity: 1; transform: translateX(0); } }
+@media (max-width: 1100px) {
+  .nav-shell { width: min(100% - 48px, 1500px); gap: 28px; }
+  .desktop-nav { gap: 12px; }
+  .nav-link { font-size: 11px; }
+  .nav-actions { gap: 12px; }
+}
+@media (max-width: 900px) {
+  .desktop-nav { display: none; }
+  .mobile-menu-button { display: grid; }
+}
+@media (max-width: 740px) {
+  .nav-shell { width: calc(100% - 36px); height: 66px; gap: 0; }
+  .brand { font-size: 17px; }
+  .desktop-nav, .notification-button { display: none; }
+  .profile-control { display: flex; }
+  .nav-actions { gap: 6px; }
+  .mobile-menu-button { display: grid; }
+  .nav-search { position: absolute; top: 66px; left: 18px; right: 18px; width: auto; }
+  .mobile-menu { position: absolute; top: 66px; left: 0; right: 0; display: flex; flex-direction: column; gap: 2px; padding: 12px 18px 18px; background: rgba(10,12,18,.97); border-top: 1px solid rgba(255,255,255,.07); box-shadow: 0 16px 30px rgba(0,0,0,.24); }
+  .mobile-nav-link, .mobile-search-link { padding: 12px 10px; text-align: left; font-size: 14px; }
+  .mobile-search-link { display: flex; align-items: center; gap: 10px; border: 0; background: none; color: #b9bbc3; cursor: pointer; }
+}
