@@ -47,7 +47,7 @@ Implementation: Custom React hooks combined with browser LocalStorage to persist
 --------------------------------------------------------------------------------------------------------------------------------
 Library/Framework: React (Functional components & hooks)
 
-Bundler: Vite (Fast development & optimized builds)
+.Bundler: Vite (Fast development & optimized builds)
 
 Routing: React Router
 
