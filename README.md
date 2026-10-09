@@ -1,5 +1,5 @@
 NEXFLIX (Frontend Training Project)
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 A responsive streaming platform UI prototype built iteratively during hands-on training sessions using a modern "Vibecoding" approach—combining rapid AI-assisted ideation, design prototyping, and structured frontend implementation with React, Vite, React Router, Tailwind CSS, and Lucide Icons.
 
 This repository showcases component-driven development, state management, routing, API integration patterns, and resilient fallback systems.
@@ -47,7 +47,7 @@ Implementation: Custom React hooks combined with browser LocalStorage to persist
 --------------------------------------------------------------------------------------------------------------------------------
 Library/Framework: React (Functional components & hooks)
 
-.Bundler: Vite (Fast development & optimized builds)
+Bundler: Vite (Fast development & optimized builds)
 
 Routing: React Router
 
